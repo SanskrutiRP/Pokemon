@@ -1,0 +1,70 @@
+body{
+	color: white;
+	background: linear-gradient(to right, darkblue, blue);
+	min-height: 100vh;
+}
+.container{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.pokemon-div{
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 15px;
+}
+.pokemon{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 50px 15px;
+	letter-spacing: 1px;
+	background: rgba(255, 255, 255, .2);
+	position: relative;
+	transition: all .3s ease-in;
+}
+.pokemon:hover{
+	background: rgba(255, 255, 255, .3);
+}
+#id{
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(255, 255, 255, .3);
+	color: darkblue;
+	border-radius: 50%;
+	padding: 15px 20px;
+}
+.pokemon img{
+	height: 100px;
+	width: 100px;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, .5);	
+}
+.pokemon h2{
+	transition: all .4s ease-out;
+}
+.pokemon h2:hover{
+	letter-spacing: 2px;
+}
+.abilities{
+	display: flex;
+}
+.abilities p{
+	padding: 10px;
+	margin: 0 5px;
+	font-size: 13px;
+	background-color: darkblue;
+	transition: all .3s ease-in;
+}
+.abilities p:hover{
+	background-color: blue;
+}
+
+@media(max-width: 480px){
+	.pokemon-div{
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
